@@ -20,7 +20,27 @@ function init() {
 
   // 箱を作成
   const geometry = new THREE.BoxGeometry(500, 500, 500);
-  const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
+//   const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
+  
+//texture：パーティクル用画像
+//color：花火の色
+//size：パーティクル一つ一つの大きさ
+//blending：光った感じにしたいので加算合成
+//geometry：花火の爆発する瞬間の形状を指定。爆発後の挙動は他でごにょごにょしてる。
+//scene：花火を配置する3DのScene
+
+var material =new THREE.PointsMaterial({
+    map:texture,
+    color:color,
+    size:particleSize,
+    blending: THREE.AdditiveBlending,
+    transparent: true,
+    depthTest: false
+});
+
+var particles = new THREE.Points(geometry,material);
+scene.add(particles);
+
   const box = new THREE.Mesh(geometry, material);
   scene.add(box);
 
