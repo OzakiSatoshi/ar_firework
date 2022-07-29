@@ -41,8 +41,11 @@ const material =new THREE.PointsMaterial({
     depthTest: false
 });
 
-var particles = new THREE.Points(geometry,material);
-scene.add(particles);
+// var particlebos = new THREE.Points(geometry,material);
+// scene.add(particles);
+
+var box = new THREE.Points(geometry,material);
+scene.add(box);
 
 //   const box = new THREE.Mesh(geometry, material);
 //   scene.add(box);
