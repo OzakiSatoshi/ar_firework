@@ -29,7 +29,7 @@ function init() {
 //geometry：花火の爆発する瞬間の形状を指定。爆発後の挙動は他でごにょごにょしてる。
 //scene：花火を配置する3DのScene
 
-var material =new THREE.PointsMaterial({
+const material =new THREE.PointsMaterial({
     map:texture,
     color:color,
     size:particleSize,
@@ -41,8 +41,8 @@ var material =new THREE.PointsMaterial({
 var particles = new THREE.Points(geometry,material);
 scene.add(particles);
 
-  const box = new THREE.Mesh(geometry, material);
-  scene.add(box);
+//   const box = new THREE.Mesh(geometry, material);
+//   scene.add(box);
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xFFFFFF);
