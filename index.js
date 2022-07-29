@@ -19,7 +19,7 @@ function init() {
   camera.position.set(0, 0, +1000);
 
   // 箱を作成
-  const geometry = new THREE.BoxGeometry(500, 500, 500);
+  const geometry = new THREE.BoxGeometry(50, 50, 50);
 //   const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
   
 //texture：パーティクル用画像
@@ -35,7 +35,7 @@ const texture = loader.load('texture.jpg');
 const material =new THREE.PointsMaterial({
     map:texture,
     color:0x888888,
-    size:100,
+    size:10,
     blending: THREE.AdditiveBlending,
     transparent: true,
     depthTest: false
