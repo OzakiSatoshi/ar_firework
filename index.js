@@ -34,8 +34,8 @@ const texture = loader.load('texture.jpg');
 
 const material =new THREE.PointsMaterial({
     map:texture,
-    color:color,
-    size:particleSize,
+    color:0x888888,
+    size:3,
     blending: THREE.AdditiveBlending,
     transparent: true,
     depthTest: false
