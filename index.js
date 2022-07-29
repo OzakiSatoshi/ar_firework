@@ -29,6 +29,9 @@ function init() {
 //geometry：花火の爆発する瞬間の形状を指定。爆発後の挙動は他でごにょごにょしてる。
 //scene：花火を配置する3DのScene
 
+const loader = new THREE.TextureLoader();
+const texture = loader.load('texture.jpg');
+
 const material =new THREE.PointsMaterial({
     map:texture,
     color:color,
