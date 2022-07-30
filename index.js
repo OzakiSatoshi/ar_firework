@@ -32,7 +32,7 @@ function init() {
   }
 
   // 箱を作成
-  const geometry = new THREE.SphereGeometry(200, 200, 200);
+  const geometry = new THREE.SphereGeometry();
   geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
 //   const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
   
