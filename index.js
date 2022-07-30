@@ -18,8 +18,22 @@ function init() {
   const camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
   camera.position.set(0, 0, +1000);
 
+  const SIZE = 300;
+  // 配置する個数
+  const LENGTH = 100;
+  // 頂点情報を格納する配列
+  const vertices = [];
+  for (let i = 0; i < LENGTH; i++) {
+    const x = SIZE * (Math.random() - 0.5);
+    const y = SIZE * (Math.random() - 0.5);
+    const z = SIZE * (Math.random() - 0.5);
+
+    vertices.push(x, y, z);
+  }
+
   // 箱を作成
-  const geometry = new THREE.SphereGeometry(50, 50, 50);
+  const geometry = new THREE.SphereGeometry(200, 200, 200);
+  geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
 //   const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
   
 
