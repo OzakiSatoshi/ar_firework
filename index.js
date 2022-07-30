@@ -18,9 +18,9 @@ function init() {
   const camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
   camera.position.set(0, 0, +1000);
 
-  const SIZE = 300;
+  const SIZE = 1500;
   // 配置する個数
-  const LENGTH = 100;
+  const LENGTH = 500;
   // 頂点情報を格納する配列
   const vertices = [];
   for (let i = 0; i < LENGTH; i++) {
