@@ -18,8 +18,9 @@ function init() {
   const camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
   camera.position.set(0, 0, +1000);
 
+  // サイズ
   const SIZE = 300;
-  // 配置する個数
+  // パーティクルを配置する個数
   const LENGTH = 1000;
   // 頂点情報を格納する配列
   const vertices = [];
@@ -31,26 +32,17 @@ function init() {
     vertices.push(x, y, z);
   }
 
-  // 箱を作成
+  // 球を作成
   const geometry = new THREE.SphereGeometry();
   geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
 //   const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
-  
-
-
-//texture：パーティクル用画像
-//color：花火の色
-//size：パーティクル一つ一つの大きさ
-//blending：光った感じにしたいので加算合成
-//geometry：花火の爆発する瞬間の形状を指定。爆発後の挙動は他でごにょごにょしてる。
-//scene：花火を配置する3DのScene
 
 const loader = new THREE.TextureLoader();
 const texture = loader.load('texture.png');
 
 const material =new THREE.PointsMaterial({
     map:texture,
-    color:0x888888,
+    color:0xFF0000,
     size:3,
     blending: THREE.AdditiveBlending,
     transparent: true,
