@@ -24,7 +24,7 @@ function init() {
   const LENGTH = 1000;
   // 頂点情報を格納する配列
   const vertices = [];
-  for (let i = 0; i < LENGTH; i++) {
+  for (let i = 1; i < LENGTH; i++) {
     const x = SIZE * (Math.random() - 0.5);
     const y = SIZE * (Math.random() - 0.5);
     const z = SIZE * (Math.random() - 0.5);
@@ -49,14 +49,8 @@ const material =new THREE.PointsMaterial({
     depthTest: false
 });
 
-// var particlebos = new THREE.Points(geometry,material);
-// scene.add(particles);
-
 var sphere = new THREE.Points(geometry,material);
 scene.add(sphere);
-
-//   const box = new THREE.Mesh(geometry, material);
-//   scene.add(box);
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xFFFFFF);
