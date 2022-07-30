@@ -30,12 +30,12 @@ function init() {
 //scene：花火を配置する3DのScene
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load('texture.jpg');
+const texture = loader.load('texture.png');
 
 const material =new THREE.PointsMaterial({
     map:texture,
     color:0x888888,
-    size:100,
+    size:1,
     blending: THREE.AdditiveBlending,
     transparent: true,
     depthTest: false
