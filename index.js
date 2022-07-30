@@ -18,8 +18,8 @@ function init() {
   const camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
   camera.position.set(0, 0, +1000);
 
-  // サイズ
-  const SIZE = 300;
+  // エリアのサイズ
+  const SIZE = 500;
   // パーティクルを配置する個数
   const LENGTH = 1000;
   // 頂点情報を格納する配列
@@ -33,7 +33,7 @@ function init() {
   }
 
   // 球を作成
-  const geometry = new THREE.SphereGeometry();
+  const geometry = new THREE.SphereGeometry(300,300,300);
   geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
 //   const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
 
@@ -42,8 +42,8 @@ const texture = loader.load('texture.png');
 
 const material =new THREE.PointsMaterial({
     map:texture,
-    color:0xFF0000,
-    size:3,
+    color:0xFFFF00,
+    size:10,
     blending: THREE.AdditiveBlending,
     transparent: true,
     depthTest: false
